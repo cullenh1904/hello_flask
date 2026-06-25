@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+<h1>HI, Fegeglask! </h1>
+
+<h2>index .html works!!!</h2>
+
+{% for item in send_test %}
+    <li class="glow">{{ item }}</li>
+{% endfor %}
+<br>
+
+<a href="{{ url_for('awesome') }}">Go to Game Search</a>
+<br>
+<a href="{{ url_for('cool') }}">Go to ??????????</a>
+<br>
+<br>
+<button class="custom_button" type="button">Click Me</button>
+
+<div class="awesome_display">
+    <div class="other_display">
+        <h1>Pizza</h1>
+        <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Homemade-Pizza_EXPS_FT23_376_EC_120123_3.jpg" class="cropped image_filter">
+    </div>
+
+    <div class="other_display">
+        <h1>Burger</h1>
+        <img src="https://www.foodandwine.com/thmb/XE8ubzwObCIgMw7qJ9CsqUZocNM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/MSG-Smash-Burger-FT-RECIPE0124-d9682401f3554ef683e24311abdf342b.jpg" class="cropped image_filter" >
+    </div>
+</div>
+

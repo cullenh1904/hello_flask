@@ -1,0 +1,88 @@
+body{
+    background-color: darkslategrey;
+    /*background-image: url(https://img.freepik.com/free-vector/vector-seamless-food-chalkboard-wallpapers-mostly-used-restaurants-designs_1284-43589.jpg?semt=ais_hybrid&w=740&q=80);
+    background-size: contain;*/
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: green;
+}
+
+h3 {
+    color: blue;
+}
+
+img {
+    width: 250px;
+}
+
+.cropped {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.glow:hover {
+    color: rgb(189, 154, 41);
+}
+
+.image_filter {
+    transition: ease-in-out .2s;
+    transform: scale(.96);
+    margin: 5px;
+    border: solid;
+    border-color: black;
+    filter:saturate(85%);
+
+}
+
+.image_filter:hover {
+    transform: scale(1);
+    border-color:rgb(189, 154, 41);
+    filter:saturate(1);
+}
+
+.awesome_display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.other_display {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.custom_button {
+    display: inline-block; 
+    padding: 12px 24px;   
+
+    font-size: 16px;     
+    font-weight: bold;   
+    color: #ffffff;    
+    text-align: center;   
+    
+    background-color: #0a2949; 
+    border: none;       
+
+    cursor: pointer;  
+    transition: background-color 0.15s ease;
+}
+
+.custom_button:hover {
+    color:rgb(0, 255, 242)
+}
+
+.custom_button:active {
+    transform: scale(0.9);
+    background-color: #1c3d5e;
+    color:rgb(0, 204, 255)
+}

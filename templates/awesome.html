@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='main.css') }}">
+    <title>Flask User Input</title>
+</head>
+<body>
+
+<a href="/">Go Back</a>
+
+<h1>Game Search</h1>
+
+<form method="POST">
+    <label for="username">Enter Name:</label>
+    <input type="text" id="username" name="game_id" required>
+    <button type="submit">Submit</button>
+</form>
+
+{% if send_game %}
+    <p>The games genres are {{ send_game }}!</p>
+{% endif %}
+
+</body>
+</html>

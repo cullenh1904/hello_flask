@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='main.css') }}">
+    <title>Flask User Input</title>
+</head>
+<body>
+
+<a href="/">Go Back</a>
+
+<h1>Textbox Test</h1>
+
+<form method="POST">
+    <label for="textbox">Enter something:</label>
+    <input type="text" id="textbox" name="my_textbox" required>
+    <button type="submit">Submit</button>
+</form>
+
+{% if submitted_text %}
+    <p>You entered: {{ submitted_text }}</p>
+{% endif %}
+
+</body>
+</html>
