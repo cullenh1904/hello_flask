@@ -4,7 +4,7 @@ app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route("/")
-def home():
+def home():  #test
     db = sqlite3.connect("game.db")
     cursor = db.cursor()
     sql = ("""SELECT id
