@@ -86,3 +86,38 @@ img {
     background-color: #1c3d5e;
     color:rgb(0, 204, 255)
 }
+
+.navbar {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a2949;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav_links {
+    font-size: 25px;
+    list-style: none; 
+    display: flex;     
+    margin: 0;
+    padding: 0;
+}
+
+.nav_links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
