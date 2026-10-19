@@ -17,20 +17,10 @@
 <body>
     <h1>Our Menu</h1>
     <table>
+        {% for item in results %}
         <tr>
-            <th>Food ID</th>
-            <th>Food Name</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr></tr>
-        {% for item in results %}  
-            <td>{{ item[0] }}</td>  
+            <td>{{ item[1] }}</td>
+            <td><img src="{{ url_for('static', filename="images/" +item[4]) }}" alt="{{ item[1] }}" width="200"></td>
         {% endfor %}  
         </tr>
     </table>
