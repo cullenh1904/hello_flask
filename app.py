@@ -10,10 +10,10 @@ def home():
 def menu():
     db = sqlite3.connect("food.db")
     cursor = db.cursor()
-    sql = ("""SELECT food_id FROM foods""")
+    sql = ("""SELECT food_name FROM foods""")
     cursor.execute(sql)
     results = cursor.fetchall()
-    return render_template("menu.html",results=results)
+    return render_template("menu.html", results=results)
 
 if __name__ == "__main__":
     app.run(debug=True)
