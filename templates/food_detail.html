@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+<html lang="en">
+<head>
+    <title>{{ result[1] }}</title>
+</head>
+<nav class="navbar">
+    <a href="{{ url_for('home') }}">Home</a>
+
+<ul class="nav_links">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+</ul>
+</nav>
+
+<div class="twocolumn">
+    <h1>{{ result[1] }}</h1>
+    <img src="{{ url_for('static', filename='images/' + result[4]) }}" alt="{{ result[1] }}" width="400">
+    {% for item in result2 %}
+        <tr>
+            <td>{{ item[1] }}</td>
+            <td><img src="{{ url_for('static', filename="images/" +item[4]) }}" alt="{{ item[1] }}" width="200"></td>
+    {% endfor %}
+    <p>Price: ${{ result[3] }}</p>
+</html>
