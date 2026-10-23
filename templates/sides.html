@@ -21,9 +21,9 @@
     <table>
         {% for item in results %}
         <tr>
-            <td>{{ item[1] }}</td>
+            <td class="td_cool">{{ item[1] }}</td>
             <td>
-                <a href="item/{{ item[0] }}">
+                <a>
                     <img src="{{ url_for('static', filename="images/" +item[4]) }}" alt="{{ item[1] }}" width="200">
                 </a>
             </td>

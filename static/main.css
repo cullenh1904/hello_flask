@@ -122,3 +122,21 @@ img {
     transition: background-color 0.3s ease;
 }
 
+table {
+    border-collapse: collapse;
+    width: auto;
+}
+
+th,td {
+    border: 2px solid white;
+    background-color: #0a2949;
+    padding: 10px;
+    text-align: left;
+
+}
+
+.td_cool {
+    font-size: 20px;
+    color: white;
+}
+
