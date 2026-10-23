@@ -3,20 +3,30 @@
 
 <html lang="en">
 <head>
-    <title>hi</title>
+    <title>{{ food_data[1] }}</title>
 </head>
 <nav class="navbar">
     <a href="{{ url_for('home') }}">Home</a>
 
 <ul class="nav_links">
-    <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('menu') }}">Menu</a></li>
+    <li><a href="{{ url_for('drinks') }}">Drinks</a></li>
+    <li><a href="{{ url_for('sides') }}">Sides</a></li>
+    <li><a href="{{ url_for('mains') }}">Mains</a></li>
+    <li><a href="{{ url_for('menu') }}">Menu</a></li>
 </ul>
 </nav>
 
-<body>
-    <h2>{{ ingredient_data }}</h2>
 
+<body>
+    <h1>{{ food_data[1] }} Ingredients</h1>
+    <img src="{{ url_for('static', filename="images/" +food_data[4]) }}" alt="{{ food_data[1] }}" width="200">
+    <table>
+        {% for item in ingredient_data %}
+        <tr>
+            <td class="td_cool">{{ item[0] }}</td>
+        {% endfor %}  
+        </tr>
+    </table>
 </body>
 
 

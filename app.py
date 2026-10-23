@@ -40,8 +40,13 @@ def food_detail(food_id):
     ingredient_data = query_db("""SELECT ingredients.ingredient_name
       FROM food_ingredients 
       INNER JOIN ingredients ON food_ingredients.ingredient_id = ingredients.ingredient_id 
-      WHERE food_ingredients.food_id = ?""", args=(food_id,)) 
-    return render_template("food_detail.html", ingredient_data=ingredient_data)
+      WHERE food_ingredients.food_id = ?""", args=(food_id,))
+    food_data = query_db("SELECT * FROM foods WHERE food_id = ?", args=(food_id,), one=True)
+    return render_template("food_detail.html", ingredient_data=ingredient_data, food_data=food_data)
+
+@app.route("/aboutus")
+def aboutus():
+    return render_template("about_us.html")
 
 
 #@app.route("/item/<int:food_id>")
